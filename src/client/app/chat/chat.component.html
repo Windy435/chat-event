@@ -1,0 +1,13 @@
+<div class="container ui-g">
+  <div class="ui-g-12 ui-md-6">
+    <div class="ui-g">
+      <fc-chat-message-list [roomId]="roomId"></fc-chat-message-list>
+    </div>
+    <div class="ui-g">
+      <fc-chat-message-form [roomId]="roomId"></fc-chat-message-form>
+    </div>
+  </div>
+  <div class="ui-g-12 ui-md-6 ui-g-nopad">
+      <fc-select-room (onChangeRoom)="onChangeRoom($event)"></fc-select-room>
+  </div>
+</div>

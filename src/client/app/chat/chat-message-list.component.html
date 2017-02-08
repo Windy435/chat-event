@@ -1,0 +1,7 @@
+<section class="message-list-container">
+  <fc-chat-message *ngFor="let m of messages" [message]="m"></fc-chat-message>
+
+  <div *ngIf="messages.length < 1">
+    No messages
+  </div>
+</section>

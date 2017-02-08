@@ -1,0 +1,18 @@
+<h1>Select chat room</h1>
+<div class="room-container">
+  <div *ngFor="let room of rooms">
+    <h1>
+      {{ room.name }}
+    </h1>
+    <div>
+      <p>{{ room.description }}</p>
+    </div>
+    <div>
+      <button (click)="JoinRoom(room.key)" md-raised-button color="primary">Join room</button>
+    </div>
+  </div>
+  <div *ngIf="rooms.length < 1">
+    <h2>No rooms available</h2>
+  </div>
+</div>
+

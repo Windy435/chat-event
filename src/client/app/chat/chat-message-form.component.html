@@ -1,0 +1,14 @@
+<div>
+  <div>
+    <form name="form" #f="ngForm" novalidate (ngSubmit)="saveMessage()">
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !message.valid }">
+        <input type="text" class="form-control" name="body" [(ngModel)]="model.message" #message="ngModel"
+               required placeholder="Message..."/>
+        <div *ngIf="f.submitted && !message.valid" class="help-block">Message is required</div>
+      </div>
+      <div class="form-group">
+        <button color="primary" type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
